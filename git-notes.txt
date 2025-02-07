@@ -1,0 +1,8 @@
+Create a workspace:
+   git clone <some-url>     : from an existing repository
+   git init                 : a new repository
+
+Get details of 'remotes':
+   git remote -v            : list verbose details of local repo's remotes
+
+
