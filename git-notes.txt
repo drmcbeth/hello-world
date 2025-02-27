@@ -5,4 +5,49 @@ Create a workspace:
 Get details of 'remotes':
    git remote -v            : list verbose details of local repo's remotes
 
+Workspace status:
+   git status
+   git diff <commit> <commit> -- <filename>
+   git branch -v  (local)
+   git branch -r  (remote)
+
+Workspace workflow:
+   git add <files/dirs>
+   git rm <files/dirs>
+   git commit -m "<message>" 
+   git commit --amend
+   git checkout <branch or tag>
+   git switch <branch or tag>
+
+   git pull
+   git push
+
+   git tag <tag name>
+   git tag -a -m <message> <tag name>
+   git branch <new branch>
+   git merge
+
+Repository info and history:
+   git log
+
+
+Suggested aliases you might want in your ~/.bashrc:
+
+alias  gs='git status'
+alias  gb='git branch -v'
+
+alias gdc='git diff --cached'
+alias gdw='git diff -w --ignore-blank-lines'
+alias gdn='git diff --name-status'
+alias gds='git diff --stat'
+alias gdt='git difftool -y'
+
+alias gfd='git fetch --dry-run'
+
+alias gln='git log --name-status --color'
+alias glo='git log --oneline --decorate --graph --branches --all -n20'
+
+alias  gtree="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=iso --all"
+alias gtreer="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all"
+alias gtrees="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=iso --name-status --all"
 
